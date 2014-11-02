@@ -284,4 +284,12 @@ static const int kStateKey;
 
 
 @implementation TPKeyboardAvoidingState
+
+-(BOOL)keyboardVisible {
+    if (self.keyboardRect.size.height == 0) {
+        return NO;
+    }
+    return _keyboardVisible;
+}
+
 @end
